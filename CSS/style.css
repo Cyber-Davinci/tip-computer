@@ -1,0 +1,75 @@
+:root{
+    --strong-cyan:hsl(172, 67%, 45%);
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+    --Dark-grayish-cyan: hsl(186, 14%, 43%);
+    --Grayish-cyan: hsl(184, 14%, 56%);
+    --Light-grayish-cyan: hsl(185, 41%, 84%);
+    --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: var(--Light-grayish-cyan);
+    overflow: hidden;
+}
+.headin{
+    text-align: center;
+    margin: 2rem 0 2rem 0;
+}
+.container{
+    overflow: hidden;
+}
+.inner-container{
+    background-color: var(--White);
+    height: 90vh;
+    overflow: hidden;
+    padding: 2rem;
+    border: none;
+    border-radius: 2rem 2rem 0 0;
+    margin: auto;
+}
+/* bill style starts */
+.bill{
+    display: flex;
+    flex-direction: column;
+    margin: auto 2rem;
+}
+.bill-heading h3{
+    color: var(--Grayish-cyan);
+    font-weight: 700;
+    padding-bottom: .50rem;
+}
+.bill .bill-input{
+    position: relative;
+}
+.bill-input i{
+    position: absolute;
+    margin: 1rem auto;
+    padding-left: .5rem;
+    font-size: 1.5rem;
+    color: var(--Grayish-cyan);
+}
+.bill-input input{
+    width: 90%;
+    height: 3.5rem;
+    font-size: 1.5rem;
+    border: none;
+    background-color: var(--Very-light-grayish-cyan);
+    padding-right: 1rem;
+    text-align: right;
+    outline: none;
+    font-weight: 700;
+    color: var(--Very-dark-cyan);
+
+}
+/* bill style end */
+
+/* tip options start */
+
+
+/* tip options ends */

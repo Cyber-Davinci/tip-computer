@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber's Tip Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="headin">
+            <h2>SPLI</h2>
+            <h2>TTER</h2>
+        </div>
+        <div class="inner-container">
+            <!-- bill container starts here -->
+            <div class="bill">
+                <div class="bill-heading">
+                    <h3>Bill</h3>
+                </div>
+                <div class="bill-input">
+                    <i class="fa-solid fa-dollar-sign"></i>
+                    <input type="text" placeholder="bill amount" value="142.55">
+                </div>
+            </div>
+            <!-- bill container ends here -->
+
+            <!-- tip select option starts here -->
+            <div class="select-tip-options">
+                <div class="tip-option-heading"><h4>Select Tip %</h4></div>
+
+                <div class="tip-options">
+                    <input type="button" value="5%">
+                    <input type="button" value="5%">
+                    <input type="button" value="5%">
+                    <input type="button" value="5%">
+                    <input type="button" value="5%">
+                    <input type="button"  value="custom">
+                </div>
+            </div>
+            <!-- tip select option end here -->
+
+            <!-- number of people starts here -->
+            <div class="num-people">
+                <div class="num-of-people-heading"><h4>Number of People</h4></div>
+                <div class="num-of-people-input">
+                    <input type="text" placeholder="number of people...">
+                </div>
+            </div>
+            <!-- number of people ends here -->
+
+            <!-- tip results container starts here -->
+            <div class="tip-results-container">
+                <div class="tip-amount">
+                    <div class="tip-amount-text">
+                        <h3>Tip Amount</h3>
+                        <p>/ person</p>
+                    </div>
+                    <div class="amount"><h3>$4.27</h3></div>
+                </div>
+                
+                <div class="total-amount">
+                    <div class="total-amount-text">
+                        <h3>Total</h3>
+                        <p>/ person</p>
+                    </div>
+                    <div class="total"><h3>$32.79</h3></div>
+                </div>
+                <div class="reset-btn">
+                    <button>RESET</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+</body>
+</html>
