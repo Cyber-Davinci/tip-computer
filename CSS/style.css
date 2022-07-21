@@ -17,6 +17,13 @@ body{
     background-color: var(--Light-grayish-cyan);
     overflow: hidden;
 }
+h3{
+    color: var(--Grayish-cyan);
+    font-weight: 700;
+    padding-bottom: .50rem;
+    font-size: 1.;
+}
+
 .headin{
     text-align: center;
     margin: 2rem 0 2rem 0;
@@ -37,12 +44,14 @@ body{
 .bill{
     display: flex;
     flex-direction: column;
-    margin: auto 2rem;
+    margin: auto;
+    justify-content: center;
 }
-.bill-heading h3{
-    color: var(--Grayish-cyan);
-    font-weight: 700;
-    padding-bottom: .50rem;
+
+.bill{
+    display: flex;
+    justify-content: center;
+    margin-left: .5rem;
 }
 .bill .bill-input{
     position: relative;
@@ -55,7 +64,7 @@ body{
     color: var(--Grayish-cyan);
 }
 .bill-input input{
-    width: 90%;
+    width: 98%;
     height: 3.5rem;
     font-size: 1.5rem;
     border: none;
@@ -71,5 +80,38 @@ body{
 
 /* tip options start */
 
+.select-tip-options{
+    margin:2rem 0;
+}
+.tip-option-heading{
+    margin-left: .4rem;
+    padding-bottom: .5rem;
+}
+
+.tip-options{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+.tip-options input{
+    width: 90%;
+    height: 4rem;
+    margin: auto;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border: none;
+    border-radius: .3rem;
+    background-color: var(--Very-dark-cyan);
+    color: var(--White);
+
+}
+input.active{
+    background-color: var(--strong-cyan);
+}
+input.custom{
+    background-color: var(--Very-light-grayish-cyan);
+    color: var(--Dark-grayish-cyan)
+}
 
 /* tip options ends */
