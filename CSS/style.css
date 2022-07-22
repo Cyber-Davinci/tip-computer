@@ -1,117 +1,176 @@
-:root{
-    --strong-cyan:hsl(172, 67%, 45%);
-    --Very-dark-cyan: hsl(183, 100%, 15%);
-    --Dark-grayish-cyan: hsl(186, 14%, 43%);
-    --Grayish-cyan: hsl(184, 14%, 56%);
-    --Light-grayish-cyan: hsl(185, 41%, 84%);
-    --Very-light-grayish-cyan: hsl(189, 41%, 97%);
-    --White: hsl(0, 0%, 100%);
+@import url('https://fonts.google.com/specimen/Space+Mono');
+
+:root {
+  --strong-cyan: hsl(172, 67%, 45%);
+  --Very-dark-cyan: hsl(183, 100%, 15%);
+  --Dark-grayish-cyan: hsl(186, 14%, 43%);
+  --Grayish-cyan: hsl(184, 14%, 56%);
+  --Light-grayish-cyan: hsl(185, 41%, 84%);
+  --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
 }
 
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Space Mono", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-body{
-    background-color: var(--Light-grayish-cyan);
-    overflow: hidden;
+body {
+  background-color: var(--Light-grayish-cyan);
+  overflow: auto;
 }
-h3{
-    color: var(--Grayish-cyan);
-    font-weight: 700;
-    padding-bottom: .50rem;
-    font-size: 1.;
+h3 {
+  color: var(--Grayish-cyan);
+  font-weight: 700;
+  padding-bottom: 0.5rem;
+  font-size: 1;
 }
 
-.headin{
-    text-align: center;
-    margin: 2rem 0 2rem 0;
+
+.headin {
+  text-align: center;
+  margin: 2rem 0 2rem 0;
 }
-.container{
-    overflow: hidden;
+.container {
+  overflow: hidden;
+
 }
-.inner-container{
-    background-color: var(--White);
-    height: 90vh;
-    overflow: hidden;
-    padding: 2rem;
-    border: none;
-    border-radius: 2rem 2rem 0 0;
-    margin: auto;
+.inner-container {
+  background-color: var(--White);
+  height: auto;
+  overflow: hidden;
+  padding: 2rem;
+  border: none;
+  border-radius: 2rem 2rem 0 0;
+  margin: auto;
 }
 /* bill style starts */
-.bill{
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    justify-content: center;
+.bill,
+.num-people {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+  margin-left: 0.5rem;
 }
 
-.bill{
-    display: flex;
-    justify-content: center;
-    margin-left: .5rem;
-}
-.bill .bill-input{
-    position: relative;
-}
-.bill-input i{
-    position: absolute;
-    margin: 1rem auto;
-    padding-left: .5rem;
-    font-size: 1.5rem;
-    color: var(--Grayish-cyan);
-}
-.bill-input input{
-    width: 98%;
-    height: 3.5rem;
-    font-size: 1.5rem;
-    border: none;
-    background-color: var(--Very-light-grayish-cyan);
-    padding-right: 1rem;
-    text-align: right;
-    outline: none;
-    font-weight: 700;
-    color: var(--Very-dark-cyan);
 
+.bill .bill-input,
+.num-people-input {
+  position: relative;
+}
+.bill-input i,
+.num-people-input i {
+  position: absolute;
+  margin: 1rem auto;
+  padding-left: 0.5rem;
+  font-size: 1.5rem;
+  color: var(--Grayish-cyan);
+}
+.bill-input input,
+.num-people-input input {
+  width: 98%;
+  height: 3.5rem;
+  font-size: 1.5rem;
+  border: none;
+  background-color: var(--Very-light-grayish-cyan);
+  padding-right: 1rem;
+  text-align: right;
+  outline: none;
+  font-weight: 700;
+  color: var(--Very-dark-cyan);
 }
 /* bill style end */
 
 /* tip options start */
 
-.select-tip-options{
-    margin:2rem 0;
+.select-tip-options {
+  margin: 2rem 0;
 }
-.tip-option-heading{
-    margin-left: .4rem;
-    padding-bottom: .5rem;
+.tip-option-heading {
+  margin-left: 0.4rem;
+  padding-bottom: 0.5rem;
 }
 
-.tip-options{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+.tip-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
 }
-.tip-options input{
-    width: 90%;
-    height: 4rem;
-    margin: auto;
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: 700;
-    border: none;
-    border-radius: .3rem;
-    background-color: var(--Very-dark-cyan);
-    color: var(--White);
-
+.tip-options input {
+  width: 90%;
+  height: 4rem;
+  margin: auto;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 0.3rem;
+  background-color: var(--Very-dark-cyan);
+  color: var(--White);
+  cursor: pointer;
 }
-input.active{
-    background-color: var(--strong-cyan);
+input.active {
+  background-color: var(--strong-cyan);
+  color: var(--Very-dark-cyan);
 }
-input.custom{
-    background-color: var(--Very-light-grayish-cyan);
-    color: var(--Dark-grayish-cyan)
+input.custom {
+  background-color: var(--Very-light-grayish-cyan);
+  color: var(--Dark-grayish-cyan);
 }
 
 /* tip options ends */
+
+/* number of people section */
+/* has similar stylings with .bill input so i used that instead
+uh can refer to that for any changes or so. */
+
+/* tip amount section */
+
+.tip-results-container {
+  width: 98%;
+  border: none;
+  background-color: var(--Very-dark-cyan);
+  margin: auto auto;
+  margin-top: 2rem;
+  border-radius: 1.3rem;
+  height: 21rem;
+}
+.tip-amount,
+.total-amount {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 3rem;
+}
+.tip-amount h3, .total-amount h3{
+    font-size: 1.5rem;
+    color: var(--White);
+}
+p{
+    font-size: 1.2rem;
+    color: var(--Dark-grayish-cyan);
+}
+
+.amount h3, .total h3{
+    color: var(--strong-cyan);
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+.reset-btn{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.reset-btn button{
+    width: 90%;
+    font-size: 1.5rem;
+    border-radius: .5rem;
+    border: none;
+    /* height: 2rem; */
+    padding: 1rem;
+    background-color: var(--strong-cyan);
+    color: var(--Very-dark-cyan);
+    cursor: pointer;
+}
