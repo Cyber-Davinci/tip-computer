@@ -1,87 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cyber's Tip Calculator</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="CSS/style.css">
-</head>
-<body>
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="CSS/style.css" />
+  </head>
+  <body>
     <div class="container">
-        <div class="headin">
-            <h2>SPLI</h2>
-            <h2>TTER</h2>
-        </div>
-        
-        <div class="inner-container">
-            <div class="user-input-container">
-                <!-- bill container starts here -->
-                <div class="bill">
-                    <div class="bill-heading">
-                        <h3>Bill</h3>
-                    </div>
-                    <div class="bill-input">
-                        <i class="fa-solid fa-dollar-sign"></i>
-                        <input type="text" placeholder="bill amount" class="text-input" id="bill-amount" onkeypress="calculateTip()" onchange="calculateTip()">
-                    </div>
-                </div>
-                <!-- bill container ends here -->
-    
-                <!-- tip select option starts here -->
-                <div class="select-tip-options">
-                    <div class="tip-option-heading"><h3>Select Tip %</h3></div>
-    
-                    <div class="tip-options " id="tip-options" onclick="calculateTip()">
-                        <input type="button" value="5%" class="tip">
-                        <input type="button" value="10%" class="tip" >
-                        <input type="button" value="15%"  class="tip">
-                        <input type="button" value="25%" class="tip">
-                        <input type="button" value="50%" class="tip">
-                        <input type="text"   placeholder="Custom" class="text-input custom" id="custom-tip" onchange="calculateTip()" onkeypress="calculateTip()">
-                    </div>
-                </div>
-                <!-- tip select option end here -->
-    
-                <!-- number of people starts here -->
-                <div class="num-people">
-                    <div class="num-people-heading"><h3>Number of People</h3></div>
-                    <div class="num-people-input">
-                        <i class="fa-solid fa-user"></i>
-                        <input type="text" placeholder="people..." class="text-input" id="num-of-people" onkeypress="calculateTip()" onchange="calculateTip()">
-                    </div>
-                </div>
-                <!-- number of people ends here -->
+      <div class="headin">
+        <h2>SPLI</h2>
+        <h2>TTER</h2>
+      </div>
 
+      <div class="inner-container">
+        <div class="user-input-container">
+          <!-- bill container starts here -->
+          <div class="bill">
+            <div class="bill-heading">
+              <h3>Bill</h3>
             </div>
-
-            <!-- tip results container starts here -->
-                <div class="tip-results-container">
-                <div class="tip-amount">
-                    <div class="tip-amount-text">
-                        <h3 id="tip-text" id="tip-text">Tip Amount</h3>
-                        <p>/ person</p>
-                    </div>
-                    <div class="amount" ><h3 id="amount-value">$0.00</h3></div>
-                </div>
-                
-                <div class="total-amount">
-                    <div class="total-amount-text">
-                        <h3>Total</h3>
-                        <p>/ person</p>
-                    </div>
-                    <div class="total"><h3 id="total-amount">$0.00</h3></div>
-                </div>
-                <div class="reset-btn">
-                    <button onclick="resetAll()">RESET</button>
-                </div>
+            <div class="bill-input">
+              <i class="fa-solid fa-dollar-sign"></i>
+              <input
+                type="text"
+                placeholder="bill amount"
+                class="text-input"
+                id="bill-amount"
+                onkeypress="calculateTip()"
+                onchange="calculateTip()"
+              />
             </div>
+          </div>
+          <!-- bill container ends here -->
 
+          <!-- tip select option starts here -->
+          <div class="select-tip-options">
+            <div class="tip-option-heading"><h3>Select Tip %</h3></div>
+
+            <div class="tip-options" id="tip-options" onclick="calculateTip()">
+              <input type="button" value="5%" class="tip" />
+              <input type="button" value="10%" class="tip" />
+              <input type="button" value="15%" class="tip" />
+              <input type="button" value="25%" class="tip" />
+              <input type="button" value="50%" class="tip" />
+              <input
+                type="text"
+                placeholder="Custom"
+                class="text-input custom"
+                id="custom-tip"
+                onchange="calculateTip()"
+                onkeypress="calculateTip()"
+              />
+            </div>
+          </div>
+          <!-- tip select option end here -->
+
+          <!-- number of people starts here -->
+          <div class="num-people">
+            <div class="num-people-heading"><h3>Number of People</h3></div>
+            <div class="num-people-input">
+              <i class="fa-solid fa-user"></i>
+              <input
+                type="text"
+                placeholder="people..."
+                class="text-input"
+                id="num-of-people"
+                onkeypress="calculateTip()"
+                onchange="calculateTip()"
+              />
+            </div>
+          </div>
+          <!-- number of people ends here -->
         </div>
 
+        <!-- tip results container starts here -->
+        <div class="tip-results-container">
+          <div class="tip-amount">
+            <div class="tip-amount-text">
+              <h3 id="tip-text" id="tip-text">Tip Amount</h3>
+              <p>/ person</p>
+            </div>
+            <div class="amount"><h3 id="amount-value">$0.00</h3></div>
+          </div>
+
+          <div class="total-amount">
+            <div class="total-amount-text">
+              <h3>Total</h3>
+              <p>/ person</p>
+            </div>
+            <div class="total"><h3 id="total-amount">$0.00</h3></div>
+          </div>
+          <div class="reset-btn">
+            <button onclick="resetAll()">RESET</button>
+          </div>
+        </div>
+      </div>
+      <br />
+      <br />
+      <br />
     </div>
     <script src="JS/script.js"></script>
-</body>
+  </body>
 </html>

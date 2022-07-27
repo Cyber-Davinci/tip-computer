@@ -46,7 +46,7 @@ function calculateTip() {
     tipAmount = (tipValue * billValue) / persons;
     let totalAmount = tipAmount + billValue;
     document.getElementById("amount-value").innerHTML = `$${tipAmount.toFixed(2)}`;
-    document.getElementById("total-amount").innerHTML = `$${totalAmount}`;
+    document.getElementById("total-amount").innerHTML = `$${totalAmount.toFixed(2)}`;
   }
 
 }
@@ -80,6 +80,6 @@ function toggleActive(){
 function resetAll(){
   resetActive()
   billAmount.value = customTip.value = numOfPeople.value = ''
-  document.getElementById("amount-value").innerHTML = `$0.00cyber-npm n`;
+  document.getElementById("amount-value").innerHTML = `$0.00`;
   document.getElementById("total-amount").innerHTML = `$0.00`; 
 }
