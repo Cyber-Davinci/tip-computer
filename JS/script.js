@@ -80,6 +80,6 @@ function toggleActive(){
 function resetAll(){
   resetActive()
   billAmount.value = customTip.value = numOfPeople.value = ''
-  document.getElementById("amount-value").innerHTML = `$0.00`;
+  document.getElementById("amount-value").innerHTML = `$0.00cyber-npm n`;
   document.getElementById("total-amount").innerHTML = `$0.00`; 
 }
