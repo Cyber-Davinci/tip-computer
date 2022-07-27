@@ -1,0 +1,19 @@
+{
+  "name": "tip_calculator",
+  "version": "1.0.0",
+  "description": "just a tip computer",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cyber-Davinci/tip-computer.git"
+  },
+  "author": "Cyber-Davinci",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cyber-Davinci/tip-computer/issues"
+  },
+  "homepage": "https://github.com/Cyber-Davinci/tip-computer#readme"
+}
