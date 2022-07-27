@@ -14,11 +14,11 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Space Mono", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: "Space Mono", Arial, Helvetica, sans-serif;
 }
 body {
   background-color: var(--Light-grayish-cyan);
-  overflow: auto;
+  /* overflow: auto; */
 }
 h3 {
   color: var(--Grayish-cyan);
@@ -34,22 +34,28 @@ h3 {
 }
 .container {
   overflow: hidden;
+  width: 100%;
+  border: none;
+  
 
 }
 .inner-container {
   background-color: var(--White);
   height: auto;
+  width: auto;
   overflow: hidden;
   padding: 2rem;
   border: none;
   border-radius: 2rem 2rem 0 0;
   margin: auto;
+  /* max-width: 860px; */
+  
 }
 /* bill style starts */
 .bill,
 .num-people {
-  display: flex;
-  flex-direction: column;
+  /* display: flex; */
+  /* flex-direction: column; */
   margin: auto;
   justify-content: center;
   margin-left: 0.5rem;
@@ -115,6 +121,10 @@ h3 {
   background-color: var(--strong-cyan);
   color: var(--Very-dark-cyan);
 }
+.tip.not-active{
+  opacity: .5;
+  pointer-events: none;
+}
 input.custom {
   background-color: var(--Very-light-grayish-cyan);
   color: var(--Dark-grayish-cyan);
@@ -144,17 +154,17 @@ uh can refer to that for any changes or so. */
   padding-top: 3rem;
 }
 .tip-amount h3, .total-amount h3{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: var(--White);
 }
 p{
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: var(--Dark-grayish-cyan);
 }
 
 .amount h3, .total h3{
     color: var(--strong-cyan);
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     font-weight: bolder;
 }
 .reset-btn{
@@ -168,9 +178,53 @@ p{
     font-size: 1.5rem;
     border-radius: .5rem;
     border: none;
-    /* height: 2rem; */
     padding: 1rem;
     background-color: var(--strong-cyan);
     color: var(--Very-dark-cyan);
     cursor: pointer;
+}
+
+
+
+
+@media all and (min-width:600px){
+  .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    margin: auto auto;
+  } 
+  .inner-container{
+    display: flex;
+    margin: 2rem;
+    border-radius: 2rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; 
+   }
+
+
+  .tip-results-container{
+    height: 31rem;
+    margin-top: 0;
+    margin-left: 2rem;
+
+  }
+  .tip-amount h3, .total-amount h3{
+    font-size: 1.5rem;
+    color: var(--White);
+}
+p{
+    font-size: 1rem;
+    color: var(--Dark-grayish-cyan);
+}
+
+.amount h3, .total h3{
+    color: var(--strong-cyan);
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+  .reset-btn{
+    margin-top: 10rem;
+  }
 }
